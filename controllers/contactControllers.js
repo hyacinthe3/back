@@ -60,7 +60,7 @@ export const updateContactById=async(req,res)=>{
         if (!updatedData) {
             return res.status(404).json({ success: false, message: "contact not found" });
         }
-        res.status(200).json({ success: true, message: "contact updated successfully" });
+        res.status(201).json({ success: true, message: "contact updated successfully" });
     }
     catch (error) {
         res.status(200).json({ success: false, message: "server error", error: error.message });
